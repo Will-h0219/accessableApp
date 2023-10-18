@@ -1,0 +1,24 @@
+.event {
+  position: relative;
+  &-front-page {
+    width: 100%;
+    height: 100px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    img {
+      width: 100%;
+    }
+  }
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    .card-btns {
+      font-size: 14px;
+      color: #fff !important;
+      padding: 4px;
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+.access {
+  display: flex;
+  justify-content: space-between;
+  &-btn {
+    transform: scale(2);
+  }
+  &-search-bar {
+    max-width: 60%;
+    display: flex;
+    align-items: stretch;
+    .search-btn {
+      min-height: 56px;
+    }
+    mat-icon {
+      margin: 0 !important;
+    }
+  }
+}
+

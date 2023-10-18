@@ -1,0 +1,15 @@
+<section class="access">
+  <button mat-icon-button class="access-btn">
+    <mat-icon>accessible</mat-icon>
+  </button>
+
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="access-search-bar">
+    <mat-form-field appearance="outline">
+      <mat-label>Buscar</mat-label>
+      <input matInput formControlName="search" placeholder="Buscar">
+    </mat-form-field>
+    <button mat-button class="search-btn" color="primary">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+</section>

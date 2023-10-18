@@ -1,0 +1,17 @@
+<section class="home">
+  <app-accessible-header (search)="onSearch($event)"></app-accessible-header>
+
+  <ng-container *ngIf="events$ | async as events; else noResults">
+    <section class="event-container">
+      <ng-container *ngFor="let event of events">
+        <app-event-card [event]="event"></app-event-card>
+      </ng-container>
+    </section>
+  </ng-container>
+</section>
+
+
+<ng-template #noResults>
+  No hay nada
+</ng-template>
+

@@ -1,0 +1,21 @@
+<section class="event">
+  <div class="event-front-page">
+    <img [src]="event.frontPage">
+  </div>
+  <div class="event-actions">
+    <a
+      [routerLink]="[ '/detail', event.id ]"
+      class="card-btns"
+      mat-button color="primary"
+    >
+      VER DETALLES
+    </a>
+
+    <button
+      class="card-btns"
+      mat-button color="primary"
+    >
+      COMPRA TUS BOLETAS
+    </button>
+  </div>
+</section>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-primary:not(mat-form-field) {
+  background: #EC6A6A !important;
+}
+
+.base-color {
+  color: var(--main-dark);
+}

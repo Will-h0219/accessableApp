@@ -1,0 +1,16 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .fullscreen-nav {
+    width: 100%;
+  }
+  .menu-options {
+    text-align: center;
+  }
+  .content {
+    padding: 30px;
+  }
+}
