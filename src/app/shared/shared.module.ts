@@ -5,6 +5,8 @@ import { ToolbarComponent } from './layout/components/toolbar/toolbar.component'
 import { CommonModule } from '@angular/common';
 import { SidenavContentComponent } from './layout/components/sidenav-content/sidenav-content.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { FooterComponent } from './layout/components/footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,10 +15,12 @@ import { SpinnerComponent } from './spinner/spinner.component';
     LayoutComponent,
     ToolbarComponent,
     SidenavContentComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
+    RouterModule,
     MaterialModule
   ],
   exports: [
