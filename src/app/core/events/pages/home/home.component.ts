@@ -6,6 +6,7 @@ import { EventCardComponent } from '../../components/event-card/event-card.compo
 import { Event } from 'src/app/interfaces/event.interface';
 import { MaterialModule } from 'src/app/material/material/material.module';
 import { AccessibleHeaderComponent } from '../../components/accessible-header/accessible-header.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,9 @@ import { AccessibleHeaderComponent } from '../../components/accessible-header/ac
   imports: [
     CommonModule,
     MaterialModule,
+    SharedModule,
     AccessibleHeaderComponent,
-    EventCardComponent,
+    EventCardComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
