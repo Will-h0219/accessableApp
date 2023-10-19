@@ -4,8 +4,8 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.mat-primary:not(mat-form-field) {
-  background: #EC6A6A !important;
+.mat-primary:not(mat-form-field, mat-spinner) {
+  background: var(--primary) !important;
 }
 
 .base-color {

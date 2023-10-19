@@ -1,1 +1,52 @@
-<p>event-detail works!</p>
+<section>
+  <app-accessible-header></app-accessible-header>
+
+  <ng-container *ngIf="event$ | async as event; else elseTemplate">
+    <div class="event-info">
+      <div class="flyer">
+        ¡AQUÍ ESTAN LOS DETALLES DE TU CONCIERTO!
+      </div>
+
+      <ng-container *ngIf="currentPhoto">
+        <div class="front-page">
+          <img [src]="currentPhoto">
+        </div>
+      </ng-container>
+
+      <p class="gallery-title">GALERIA</p>
+
+      <div class="carrousel" *ngIf="event">
+        <ng-container *ngFor="let pic of event.photos">
+          <div class="pic-sm" (click)="changeCurrentPhoto(pic)">
+            <img [src]="pic">
+          </div>
+        </ng-container>
+      </div>
+
+      <div class="info">
+        <div class="event-detail">
+          <h2 *ngIf="event.eventDetails.title">
+            {{ event.eventDetails.title }}
+          </h2>
+          <p class="description">
+            {{ event.eventDetails.description }}
+          </p>
+        </div>
+
+        <div class="actions">
+          <button mat-stroked-button class="actions-btn">
+            RESERVAR ASIENTOS
+          </button>
+
+          <button mat-stroked-button class="actions-btn">
+            SEGUIR EXPLORANDO
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</section>
+
+<ng-template #elseTemplate>
+  <app-spinner></app-spinner>
+</ng-template>
